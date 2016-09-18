@@ -1,0 +1,25 @@
+{
+  "name": "Traveler",
+  "plural": "Travelers",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "travelerId": {
+      "type": "string",
+      "required": true
+    },
+    "perferences": {
+      "type": [
+        "number"
+      ],
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

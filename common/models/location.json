@@ -1,0 +1,29 @@
+{
+  "name": "Location",
+  "plural": "Locations",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "cityCode": {
+      "type": "string",
+      "required": true
+    },
+    "locationCode": {
+      "type": "string",
+      "required": true
+    },
+    "tribes": {
+      "type": [
+        "number"
+      ],
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

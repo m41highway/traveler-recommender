@@ -1,0 +1,25 @@
+{
+  "name": "user",
+  "plural": "users",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "userId": {
+      "type": "string",
+      "required": true
+    },
+    "perferences": {
+      "type": [
+        "number"
+      ],
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
