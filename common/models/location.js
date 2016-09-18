@@ -27,29 +27,10 @@ module.exports = function (Location) {
     Location.getPersonalisedRecommendation = (cityCode, travelerId) => {
         return Promise.coroutine(function* () {
             try {
-                // To-do: call simialarity interface
                 console.log(travelerId);
-console.log(101);                
                 let locationResponse = yield Location.find({ where: { cityCode: cityCode } })
-console.log(102);
-                console.log(locationResponse);
-
-
-                // let travelerResponse = yield Traveler.find({ where: { travelerId: travelerId } })
                 let travelerResponse = yield Location.app.models.Traveler.getOne(travelerId)
-                console.log(travelerResponse);
-console.log(103);
-                let recommendation = yield similarity.recommend(locationResponse, travelerResponse, 3)
-                console.log(recommendation);
-
-
-                // loop location
-                // sim(location, user)
-                // sort out top 3 
-                // return array of locations
-
-                // assume an array of result
-                // console.log(res);
+                let recommendation = yield similarity.recommend(locationResponse, travelerResponse, 3)                
                 return Promise.resolve(recommendation)
 
             } catch (err) {
