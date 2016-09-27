@@ -1,6 +1,6 @@
 'use strict'
 
-const Promise = require('Bluebird')
+const Promise = require('bluebird')
 // const Traveler = require('./traveler.js')
 const similarity = require('../lib/similarity.js') 
 
